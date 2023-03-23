@@ -1,0 +1,25 @@
+/* Converts a number to octal*/ 
+
+#include <stdio.h>
+
+int main(void)
+{
+    int input, n1, n2, n3, n4, n5;
+    
+    printf ("Please enter number between 0 and 32767: ");
+    scanf ("%d", &input);
+    
+    n5 = input % 8;
+    input /= 8;
+    n4 = input % 8;
+    input /= 8;
+    n3 = input % 8;
+    input /= 8;
+    n2 = input % 8;
+    input /= 8;
+    n1 = input % 8;
+
+    printf ("Your number in octal is: %d%d%d%d%d", n1, n2, n3, n4, n5);
+    
+    return 0;
+}
